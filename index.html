@@ -5,7 +5,31 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet'>
 	<link rel = "icon" href ="css/club.jpg" type = "image/x-icon"> 
-
+	<script>
+            
+            var images = [
+                          "css/back.jpg",
+                          "css/rtcc.jpg",
+                          "css/img2.jpg",
+                          
+                      ];
+            var i = 0;
+            function mySlider()
+            {
+               document.getElementById('slide').src = images[i];
+               
+               if(i < images.length - 1)
+               {
+                   i++;
+               }else{
+                   i = 0;
+               }
+               
+               setTimeout("mySlider()",2500);
+            }
+            
+            
+        </script>
 	<style type="text/css">
 		#max{
 			height:720px;
@@ -19,6 +43,20 @@
 			width: 100%;
 			margin-top: -24px;
 			background-image: url("css/img1.jpg");
+			
+		}
+		#max2{
+			height:720px;
+			width: 100%;
+			margin-top: -24px;
+			background-image: url("css/img2.jpg");
+			
+		}
+		#max3{
+			height:720px;
+			width: 100%;
+			margin-top: -24px;
+			background-image: url("css/img3.jpg");
 			
 		}
 		#sticky-footer {
@@ -107,18 +145,9 @@
   </div>  
 </nav>
 <br>
-<div id="max">
-	<button type="button" class="btn btn-warning btn-lg btn1" onclick="myfunction()">></button>
-	<button type="button" class="btn btn-warning btn-lg btn2" onclick="myfunction()" style="text-align: left"><</button>
-	<script type="text/javascript">
+<img id="slide" src="" alt="" width="700px" height="400px"  />
 
-		var images=["max1","max2","max3"];
-		function myfunction() {
-			document.getElementById('max').setAttribute("id","max1");
-		}
-	</script>
-</div>
-
+        <script>mySlider();</script>
 <div id="particles-js" style="color:white">
 	<h1 class="headings" id="about">...About Us...</h1>
 	<div class="container">
